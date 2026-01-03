@@ -23,7 +23,7 @@ rish -c 'ls'
 This is what will be executed at remote:
 
 ```
-/system/bin/sh -c 'ls'
+/system/rish/sh -c 'ls'
 ```
 
 If you want to use other shells rather than `/system/bin/sh`, use `rish exec /path/to/other/shell`.
