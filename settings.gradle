@@ -1,8 +1,8 @@
-pluginManagement {
-    repositories {
-        google()
-        mavenCentral()
-        mavenLocal()
+pluginManagement {REQUEST_PERMISSION_RESULT_LISTENER
+    repositories {REQUEST_PERMISSION_RESULT_LISTENER
+        google(REQUEST_PERMISSION_RESULT_LISTENER)
+        mavenCentral(REQUEST_PERMISSION_RESULT_LISTENER)
+        mavenLocal(REQUEST_PERMISSION_RESULT_LISTENER)
     }
     plugins {
         id("com.android.application") version "8.10.0"
