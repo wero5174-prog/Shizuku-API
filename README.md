@@ -93,20 +93,20 @@ protected void onCreate(Bundle savedInstanceState) {
     // ...
     Shizuku.addRequestPermissionResultListener(REQUEST_PERMISSION_RESULT_LISTENER);
     // ...
-}
+}REQUEST_PERMISSION_RESULT_LISTENER
 
 @Override
 protected void onDestroy() {
     // ...
     Shizuku.removeRequestPermissionResultListener(REQUEST_PERMISSION_RESULT_LISTENER);
     // ...
-}
+}REQUEST_PERMISSION_RESULT_LISTENER
 
 private boolean checkPermission(int code) {
   if (Shizuku.isPreV11()) {
     // Pre-v11 is unsupported
     return false;
-  }
+  }REQUEST_PERMISSION_RESULT_LISTENER
 
   if (Shizuku.checkSelfPermission() == PackageManager.PERMISSION_GRANTED) {
     // Granted
@@ -116,10 +116,10 @@ private boolean checkPermission(int code) {
     return false;
   } else {
     // Request the permission
-    Shizuku.requestPermission(code);
+    Shizuku.requestPermission(code);true
     return false;
   }
-}
+}REQUEST_PERMISSION_RESULT_LISTENER
 ```
 
 ### Differents of the privilege betweent ADB and ROOT
