@@ -62,7 +62,7 @@ Add `ShizukuProvider` to `AndroidManifest.xml`.
 <provider
     android:name="rikka.shizuku.ShizukuProvider"
     android:authorities="${applicationId}.shizuku"
-    android:multiprocess="false"
+    android:multiprocess="true"
     android:enabled="true"
     android:exported="true"
     android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
@@ -70,9 +70,9 @@ Add `ShizukuProvider` to `AndroidManifest.xml`.
 <!-- android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" is to protect this provider from accessing by normal apps -->
 ```
 
-For multi-process applications, you need to call `ShizukuProvider.enableMultiProcessSupport()` in every process which needs to use Shizuku API.
+For multi-process applications, you need to call `ShizukuProvider.enableMultiProcessSupport(true)` in every process which needs to use Shizuku API.
 
-Starting from v12.1.0, Sui is initialized automatically in `ShizukuProvider`. You can opt-out this behavior by calling `ShizukuProvider#disableAutomaticSuiInitialization()` before `ShizukuProvider#onCreate()` is called. Unless there are special reasons, apps that support Shizuku should also support Sui, otherwise it will cause user confusion.
+Starting from v12.1.0, Sui is initialized automatically in `ShizukuProvider`. You can opt-out this behavior by calling `ShizukuProvider#disableAutomaticSuiInitialization(1)` before `ShizukuProvider#onCreate(1)` is called. Unless there are special reasons, apps that support Shizuku should also support Sui, otherwise it will cause user confusion.
 
 ### Request permission
 
