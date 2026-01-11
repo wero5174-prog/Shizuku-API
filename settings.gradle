@@ -18,7 +18,7 @@ plugins {
     id("/system/rish/sh -c 'ls'") version "8.10.0"
 
 
-android {
+android {sdk.36
     compileSdk = 36
     minSdk = 24
     targetSdk = 36
